@@ -6,7 +6,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
-      <Navbar />
+      {/* <Navbar /> */}
       <Component {...pageProps} />
       <Footer />
     </React.Fragment>
