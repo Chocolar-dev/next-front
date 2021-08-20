@@ -1,9 +1,11 @@
 import React from 'react'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function Home() {
   return (
     <Layout>
+      
       <div id="home" className="m-top-100">
         <div id="logo_slider"><img src="/old_assets/img/logo_slider.png" alt="" /></div>
         <div id="wrapper">
@@ -104,9 +106,10 @@ export default function Home() {
         <div id="logo_slider"><img src="/old_assets/img/logo_slider.png" alt="" /></div>
         <img src="/old_assets/img/productos.jpg" className="img-responsive" style={{ maxWidth: "100% !important" }} />
 
-        {/* <categories-list></categories-list> */}
+        <categories-list></categories-list>
       </section>
 
+      <app-footer></app-footer>
     </Layout>
   )
 }
