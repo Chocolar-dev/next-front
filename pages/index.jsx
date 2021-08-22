@@ -109,7 +109,7 @@ export default function Home() {
         <categories-list></categories-list>
       </section>
 
-      <app-footer></app-footer>
+      {/* <app-footer></app-footer> */}
     </Layout>
   )
 }
