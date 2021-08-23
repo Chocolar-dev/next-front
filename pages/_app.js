@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
-import '../styles/globals.css'
+import '../styles/index.css'
 
 function MyApp({ Component, pageProps }) {
   return (
