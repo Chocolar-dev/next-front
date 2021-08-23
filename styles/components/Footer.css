@@ -1,0 +1,74 @@
+.footer .footer {
+    background-color: var(--brown-900);
+    margin-top: 120px;
+}
+
+.footer .footer-logo {
+    background-color: var(--brown-900);
+    border-radius: 50%;
+    margin-top: 0;
+    transform: translateY(-50%);
+    margin-bottom: -55px;
+}
+
+.footer input, textarea {
+    width: 100%;
+    border: none;
+    padding: 8px 15px;
+    color: var(--brown-900);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.footer textarea {
+    margin: 0;
+}
+
+.footer label {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.footer .radio-box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--brown-300);
+    margin-right: 18px;
+    display: inline-block;
+}
+
+.footer input[type="radio"]+label {
+    display: flex;
+    align-items: center;
+}
+
+.footer input[type="radio"]:checked+label>.radio-box {
+    background: var(--brown-400);
+}
+
+.footer button[type="submit"] {
+    width: 100%;
+    background: var(--brown-300);
+    border: none;
+    padding: 14px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.footer .footer-text {
+    letter-spacing: 3px;
+}
+
+.footer .footer-text p {
+    color: rgb(233, 225, 219);
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .footer-text h1 {
+    font-size: 2rem;
+}
