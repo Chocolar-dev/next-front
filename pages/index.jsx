@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Categorias from '../components/Categorias/Categorias';
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
         </div>
       </div>
       <div className="clearfix"></div>
+
+      <Categorias></Categorias>
 
       <section id="quienes-somos" className="m-top-50">
         {/* <div className="container"> */}
