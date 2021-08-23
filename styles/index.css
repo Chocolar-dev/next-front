@@ -5,3 +5,7 @@
 @import './globals.css';
 @import './components/CategoriesList.css';
 @import './components/Footer.css';
+@import './components/Navbar.module.css';
+@import './components/Categorias.module.css';
+@import './Home.module.css';
+@import './fonts/fonts.css';

@@ -1,0 +1,34 @@
+.catSection{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.titleDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navDiv ul {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navDiv ul li {
+    list-style: none;
+    width: 20%;
+}
+.navDiv ul li div {
+    background-image: url("../../public/old_assets/img/home/1.jpg");
+}

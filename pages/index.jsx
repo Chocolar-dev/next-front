@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout';
+import Categorias from '../components/Categorias/Categorias';
 import CategoriesList from '../components/CategoriesList/CategoriesList';
 
 export default function Home() {
@@ -28,6 +29,8 @@ export default function Home() {
         </div>
       </div>
       <div className="clearfix"></div>
+
+      <Categorias></Categorias>
 
       <section id="quienes-somos" className="m-top-50">
         {/* <div className="container"> */}
