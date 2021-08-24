@@ -12,7 +12,7 @@
     --gray-light: #ECECEC;
 }
 
-@import '../public/old_assets/css/style.css';
+/* @import '../public/old_assets/css/style.css';
 @import '../public/old_assets/css/bootstrap.min.css';
 @import '../public/old_assets/css/responsiveslides/responsiveslides.css';
 @import '../public/old_assets/css/responsiveslides/demo.css';
@@ -21,7 +21,7 @@
 @import './components/Navbar.module.css';
 @import './components/Categorias.module.css';
 @import './Home.module.css';
-@import './fonts/fonts.css';
+@import './fonts/fonts.css'; */
 
 * {
     margin: 0;

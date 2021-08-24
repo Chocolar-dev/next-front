@@ -1,7 +1,8 @@
+import styles from './Footer.module.css'
+
 export default function Footer() {
     return (
-        <footer className="footer section section-primary white-transparent3" id="contacto">
-        {/* // <footer className="footer" id="contacto"> */}
+        <footer className={`${styles.footer} section section-primary white-transparent3`} id="contacto">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 footer-text">

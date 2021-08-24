@@ -29,7 +29,6 @@ export default function Home() {
       </div>
       <div className="clearfix"></div>
 
-
       <section id="quienes-somos" className="m-top-50">
         {/* <div className="container"> */}
         <div className="row no-margin">
