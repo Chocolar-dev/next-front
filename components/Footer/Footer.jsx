@@ -1,6 +1,7 @@
 export default function Footer() {
     return (
         <footer className="footer section section-primary white-transparent3" id="contacto">
+        {/* // <footer className="footer" id="contacto"> */}
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 footer-text">

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Layout from "../../../components/Layout";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function producto() {
     return (
         <Layout subtitle="Producto" description="Producto seleccionado">
-            <div>
+            <div className="m-top banner-category">
                 <h1>CACAO EN POLVO</h1>                
                 <p>Es un subproducto de la semilla del cacao. Corresponde a los sólidos no grasos de la semilla que se separan por filtración y posteriormente se muelen obteniendo así un fino polvo. Hay dos grandes grupos de cacaos en polvo, naturales o solubles. Los cacaos llamados solubles son cacao tratados con temperatura y soluciones alcalinas que le modifican el sabor y color.
                 Así es que la gama de colores que podemos encontrar es muy amplia.
@@ -13,19 +13,19 @@ export default function producto() {
                 Aceite vegetal de origen láurico especial para reemplazar la manteca de cacao y elaborar productos moldeados tabletas, figuras huecas. No necesita templado y se obtiene un excelente brillo y crack en el producto final, característico del chocolate.
                 </p>
             </div>
-            <div>
+            <div className="links">
                 <Link href="/productos"><a>productos - </a></Link>
                 <Link href="/productos/categorias"><a>categorias - </a></Link>
                 <Link href="/productos/categorias/producto"><a>producto</a></Link>
             </div>
-            <section>
+            <section className="product">
                 <div>
                     <div>
                     <h3>ALCALINO LEVE</h3>
                     </div>
                     <div>
                         <div>
-                            imagen
+                            <img src="/old_assets/panel/productos/08_30939drn.jpg" alt="" />
                         </div>
                         <div>
                             <h2>Cacao en polvo alcalino RL1</h2>
@@ -82,7 +82,6 @@ export default function producto() {
                     </div>
                 </div>
             </section>
-            <img src='\old_assets\panel\productos\08_30939drn.jpg' alt="" />
         </Layout>
     )
 }
