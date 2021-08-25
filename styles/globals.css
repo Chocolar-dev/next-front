@@ -7,8 +7,9 @@
     --brown-400: #A35639;
     --brown-300: #B5755C;
     --white: #ffffff;
-    --black: #000000;
-    --gray-dark: #0000007D;
+    --black: #1b1b1b;
+    --gray-dark: #333333;
+    --gray: #B8B5B561;
     --gray-light: #ECECEC;
 }
 
@@ -16,6 +17,10 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+}
+
+body {
+    font-family: "poppins-regular";
 }
 
 img {
@@ -46,6 +51,18 @@ img {
     letter-spacing: 2px;
 }
 
-.category-item a {
+a, a:link {
     text-decoration: none;
+    color: var(--black);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--black);
+    opacity: .8;
+}
+
+button {
+    border: none;
+    letter-spacing: 2px;
 }

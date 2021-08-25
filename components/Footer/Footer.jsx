@@ -5,8 +5,8 @@ export default function Footer() {
         <footer className={`${styles.footer} section section-primary white-transparent3`} id="contacto">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12 footer-text">
-                        <img className="footer-logo" src="/old_assets/img/logo_footer.png" />
+                    <div className={`col-md-12 ${styles["footer-text"]}`}>
+                        <img className={styles['footer-logo']} src="/old_assets/img/logo_footer.png" />
                         <h1>CONTACTO</h1>
                         <p>
                             En <span className="bold">Chocolar S.R.L</span> estamos a disposición por cualquier consulta.<br />
@@ -39,13 +39,13 @@ export default function Footer() {
                                     <div className="row">
                                         <input type="radio" name="contact-type" value="provider" id="provider" />
                                         <label htmlFor="provider">
-                                            <div className="radio-box"></div><span>PROVEEDOR</span>
+                                            <div className={styles["radio-box"]}></div><span>PROVEEDOR</span>
                                         </label>
                                     </div>
                                     <div className="row">
                                         <input type="radio" name="contact-type" value="client" id="client" />
                                         <label htmlFor="client">
-                                            <div className="radio-box"></div><span>CLIENTE</span>
+                                            <div className={styles["radio-box"]}></div><span>CLIENTE</span>
                                         </label>
                                     </div>
                                 </div>
