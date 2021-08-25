@@ -13,10 +13,22 @@
     --gray-light: #ECECEC;
 }
 
+/* @import '../public/old_assets/css/style.css';
+@import '../public/old_assets/css/bootstrap.min.css';
+@import '../public/old_assets/css/responsiveslides/responsiveslides.css';
+@import '../public/old_assets/css/responsiveslides/demo.css';
+@import './components/CategoriesList.css';
+@import './components/Footer.css';
+@import './components/Navbar.module.css';
+@import './components/Categorias.module.css';
+@import './Home.module.css';
+@import './fonts/fonts.css'; */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    font-family: 'Barlow';
 }
 
 body {
@@ -65,4 +77,8 @@ a:hover {
 button {
     border: none;
     letter-spacing: 2px;
+}
+
+.m-top {
+    margin-top: 63px !important;
 }
