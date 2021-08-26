@@ -11,6 +11,9 @@
     --gray-dark: #0000007D;
     --gray-light: #ECECEC;
 }
+.m-top {
+    margin-top: 63px !important;
+}
 
 
 @import '../public/old_assets/css/style.css';
@@ -22,4 +25,5 @@
 @import './components/CategoriesList.css';
 @import './fonts/fonts.css';
 @import './components/Navbar.css';
+@import './components/Categorypage.css';
 
