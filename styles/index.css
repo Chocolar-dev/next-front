@@ -1,7 +1,23 @@
+:root {
+    --brown-900: #381A13;
+    --brown-800: #420D10;
+    --brown-700: #52281C;
+    --brown-600: #541314;
+    --brown-500: #753D28;
+    --brown-400: #A35639;
+    --brown-300: #B5755C;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-dark: #0000007D;
+    --gray-light: #ECECEC;
+}
+
+
 @import '../public/old_assets/css/style.css';
 @import '../public/old_assets/css/bootstrap.min.css';
 @import '../public/old_assets/css/responsiveslides/responsiveslides.css';
 @import '../public/old_assets/css/responsiveslides/demo.css';
 /* @import './globals.css'; */
 @import './components/CategoriesList.css';
+@import './components/Navbar.css';
 @import './fonts/fonts.css';
