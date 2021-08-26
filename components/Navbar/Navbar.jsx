@@ -1,29 +1,27 @@
 import Link from 'next/link';
-import styles from '../../styles/components/Navbar.module.css';
+// import styles from '../../styles/components/Navbar.module.css';
 
 
 export default function Navbar() {
-
-    
-
     return (
-        <header id="header" className={styles.header}>
-            {/* <div className={styles.toggle}></div> */}
-            <div id="navbar" className={styles.navbar}>
-                <ul className={styles.ul}>
-                    <li className="barlow-semibold"><Link href="/"><a className={styles.a}>HOME</a></Link></li>
-                    <li className="barlow-semibold"><Link href="/quienes-somos"><a  className={styles.a}>QUIENES SOMOS</a></Link></li>
-                    <li className="barlow-semibold">
-                        <Link href="/productos"><a className={styles.a}>PRODUCTOS</a></Link>
-                        <div>
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </div>
+        <header className="navbar-container">
+            <nav className="navbar-desk">
+                <ul>
+                    <li>
+                        <Link href="/"><a>HOME</a></Link>
                     </li>
-                    <li className="barlow-semibold"><Link href="/contacto"><a className={styles.a}>CONTACTO</a></Link></li>
+                    <li>
+                        <Link href="/quienes-somos"><a>QUIENES SOMOS</a></Link>
+                    </li>
+                    <li className="nav-productos">
+                            <Link href="/productos"><a>PRODUCTOS</a></Link>
+                            <i class="bi bi-caret-down-fill down"></i>
+                    </li>
+                    <li>
+                        <Link href="/contacto"><a>CONTACTO</a></Link>
+                    </li>
                 </ul>
-            </div>
+            </nav>
         </header>
     )
 }
