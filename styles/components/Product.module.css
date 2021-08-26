@@ -33,6 +33,7 @@
     font-family: "poppins-bold";
     text-align: center;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 .product img {
@@ -42,6 +43,7 @@
 
 .product__name {
     color: var(--brown-900);
+    margin-top: 30px;
     margin-bottom: 34px;
 }
 
@@ -53,7 +55,6 @@
 }
 
 .table {
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -79,11 +80,14 @@
     font-size: 1.2rem;
 }
 
-.product button {
+.info-button:link, .info-button:visited, .info-button:active {
+    display: block;
     background-color: var(--brown-500);
     color: var(--white);
     padding: 12px;
     width: 100%;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .goback, .goback:link, .goback:active, .goback:visited {
@@ -103,6 +107,15 @@
     }
     .hero h1 {
         font-size: 3rem;
+    }
+    .table {
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .product__name {
+        margin-top: 0;
     }
 }
 

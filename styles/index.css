@@ -2,7 +2,6 @@
 @import '../public/old_assets/css/bootstrap.min.css';
 @import '../public/old_assets/css/responsiveslides/responsiveslides.css';
 @import '../public/old_assets/css/responsiveslides/demo.css';
-/* @import './globals.css'; */
-
+@import './globals.css';
 @import './components/CategoriesList.css';
 @import './fonts/fonts.css';

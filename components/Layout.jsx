@@ -10,13 +10,13 @@ export default function Layout({ children, title, subtitle, description }) {
     return (
         <div>
             <Head>
-                {subtitle ? (<title>{title} - {subtitle}</title>):(<title>{title}</title>)}
-                <meta name="description" content={ description } />
+                {subtitle ? (<title>{title} - {subtitle}</title>) : (<title>{title}</title>)}
+                <meta name="description" content={description} />
                 <link rel="icon" href="/old_assets/img/logo_footer.png" />
             </Head>
             <Navbar></Navbar>
 
-            <main>{ children }</main>
+            <main className="m-top">{children}</main>
 
             <Footer></Footer>
         </div>

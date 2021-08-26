@@ -17,10 +17,10 @@ export default function producto() {
                             <h3>ALCALINO LEVE</h3>
                         </div>
                         <div className="row">
-                            <div className="col-4 flex align-items-stretch">
+                            <div className="col-lg-4 flex align-items-stretch">
                                 <img src='/imgs/licor-de-cacao.jpg' alt="" />
                             </div>
-                            <div className="offset-1 col-7">
+                            <div className="offset-lg-1 col-lg-7">
                                 <h2 className={styles['product__name']}>Cacao en polvo alcalino RL1</h2>
                                 <p>Es un polvo soluble de flujo libre proveniente de la torta de cacao alcalina pulverizada obtenido por proceso del prensado de la pasta de cacao alcalina. El producto es elaborado a partir de semillas de cacao. Se utiliza para repostería, baño de repostería, elaboración de chocolate, galletitas, budines, pan dulces y leches chocolatadas.</p>
                                 <div className={styles['table']}>

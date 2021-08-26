@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout';
 import CategoriesList from '../components/CategoriesList/CategoriesList';
 
-export default function Home() {
+export default function Home({ categories }) {
   return (
     <Layout>
 
@@ -106,8 +106,17 @@ export default function Home() {
         <div id="logo_slider"><img src="/old_assets/img/logo_slider.png" alt="" /></div>
         <img src="/old_assets/img/productos.jpg" className="img-responsive" style={{ maxWidth: "100% !important" }} />
 
-        <CategoriesList></CategoriesList>
+        <CategoriesList categories={categories}></CategoriesList>
       </section>
     </Layout>
   )
+}
+
+export async function getServerSideProps() {
+  let data = await fetch('http://localhost:8765/api/categories')
+  return {
+    props: {
+      categories: await data.json()
+    }
+  }
 }
