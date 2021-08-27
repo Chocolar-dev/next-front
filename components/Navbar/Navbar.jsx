@@ -14,8 +14,8 @@ export default function Navbar() {
                         <Link href="/quienes-somos"><a>QUIENES SOMOS</a></Link>
                     </li>
                     <li className="nav-productos">
-                            <Link href="/productos"><a>PRODUCTOS</a></Link>
-                            <i class="bi bi-caret-down-fill down"></i>
+                        <Link href="/productos"><a>PRODUCTOS</a></Link>
+                        <i className="bi bi-caret-down-fill down"></i>
                     </li>
                     <li>
                         <Link href="/contacto"><a>CONTACTO</a></Link>

@@ -1,18 +1,17 @@
-export default function CardProduct() {
+export default function CardProduct({ product, category, subCategory }) {
     return (
         <div className="card-product">
-            <h3>ALCALINO <strong>LEVE</strong></h3>
+            <h3>{subCategory.name}</h3>
             <div className="img-product">
-                <img src="\old_assets\panel\productos\16_54549drn.jpg" alt="" />
+                <img src={product.img_url} alt="" />
             </div>
             <div className="detail">
-                <h2>CACAO EN POLVO</h2>
-                <h4>ALCALINO BARRI RL1</h4>
-                <p>BOLSA DE CACAO EN POLVO CONTENIDO NETO 25KG</p>
-                <h5>BARRY CALLEBAUT</h5>
+                <h2>{product.name}</h2>
+                <p>{product.short_description}</p>
+                <h5>{product.brand}</h5>
             </div>
             <div className="btns">
-                <button className="btn1">VER MÁS</button>
+                <a className="btn1" href={`/${category.slug}/${product.slug}`}>VER MÁS</a>
                 <button className="btn2">SOLICITAR INFORMACIÓN</button>
             </div>
         </div>
