@@ -1,6 +1,6 @@
 export default function categoriesList({ categories }) {
     return (
-        <div className="categories-selector">
+        <div id="lista-de-categorias" className="categories-selector">
             <h4><b>CATEGORÍAS</b> DE PRODUCTOS</h4>
             <div className="categories-selector__list mt-5">
                 {categories.map((category) =>

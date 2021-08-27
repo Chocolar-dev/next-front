@@ -11,14 +11,13 @@ export default function Navbar() {
                         <Link href="/"><a>HOME</a></Link>
                     </li>
                     <li>
-                        <Link href="/quienes-somos"><a>QUIENES SOMOS</a></Link>
+                        <Link href="/#quienes-somos"><a>QUIENES SOMOS</a></Link>
                     </li>
                     <li className="nav-productos">
-                        <Link href="/productos"><a>PRODUCTOS</a></Link>
-                        <i className="bi bi-caret-down-fill down"></i>
+                        <Link href="#lista-de-categorias"><a>PRODUCTOS</a></Link>
                     </li>
                     <li>
-                        <Link href="/contacto"><a>CONTACTO</a></Link>
+                        <Link href="#contacto"><a>CONTACTO</a></Link>
                     </li>
                 </ul>
             </nav>
