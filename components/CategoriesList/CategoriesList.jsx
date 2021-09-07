@@ -7,7 +7,7 @@ export default function categoriesList({ categories }) {
                     <div key={category.id} className="categories-selector__item category-item">
                         <a href={`/${category.slug}`}>
                             <div className="category-item__img-container">
-                                <img src="../old_assets/img/home/1.jpg" alt="" />
+                                <img src={category.img_item_url} alt="" />
                             </div>
                             <div className="category-item__name">{category.name}</div>
                         </a>

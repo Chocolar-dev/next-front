@@ -14,7 +14,7 @@ export default function Navbar() {
                         <Link href="/#quienes-somos"><a>QUIENES SOMOS</a></Link>
                     </li>
                     <li className="nav-productos">
-                        <Link href="#lista-de-categorias"><a>PRODUCTOS</a></Link>
+                        <Link href="/#lista-de-categorias"><a>PRODUCTOS</a></Link>
                     </li>
                     <li>
                         <Link href="#contacto"><a>CONTACTO</a></Link>

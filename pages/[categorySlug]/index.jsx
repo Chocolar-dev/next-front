@@ -8,7 +8,7 @@ export default function index({ category, products, subCategoriesList }) {
             <div className="category-page m-top">
                 <div className="banner" style={{ backgroundImage: `url(${category.img_url})` }}>
                     <h1>{category.name}</h1>
-                    <p>{category.description}</p>
+                    <div dangerouslySetInnerHTML={{ __html: category.description }}></div>
                 </div>
                 <Breadcrumbs category={category} />
                 <section className="product-category">

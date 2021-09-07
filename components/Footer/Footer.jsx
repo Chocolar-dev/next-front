@@ -18,15 +18,15 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <form action="">
+                <form action="http://localhost:8765/send-contact" method="GET">
                     <div className="row">
-                        <input type="text" placeholder="Nombre*" />
+                        <input type="text" name="first_name" placeholder="Nombre*" />
                     </div>
                     <div className="row">
-                        <input type="text" placeholder="Apellido*" />
+                        <input type="text" name="last_name" placeholder="Apellido*" />
                     </div>
                     <div className="row">
-                        <input type="text" placeholder="Teléfono*" />
+                        <input type="text" name="phone" placeholder="Teléfono*" />
                     </div>
                     <div className="row mt-3">
                         <div className="col-8" style={{ lineHeight: '0' }}>
