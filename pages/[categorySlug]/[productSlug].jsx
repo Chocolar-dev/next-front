@@ -6,6 +6,12 @@ import Layout from "../../components/Layout";
 import styles from "../../styles/components/Product.module.css"
 
 export default function product({ category, product, subcategory, origin }) {
+    let contactClick = function (evt) {
+        let name = evt.target.dataset.infoName
+        let input = document.querySelector('#message')
+        input.value = `Hola, me gustaría consultar más información sobre el producto ${name}`
+    }
+
     return (
         <React.Fragment>
             <Head>
@@ -58,7 +64,7 @@ export default function product({ category, product, subcategory, origin }) {
                                             <span>{product.shelf_life}</span>
                                         </div>
                                     </div>
-                                    <a className={styles['info-button']} href="#contacto">SOLICITAR INFORMACIÓN</a>
+                                    <a className={styles['info-button']} onClick={contactClick} data-info-name={product.name} href="#contacto">SOLICITAR INFORMACIÓN</a>
                                 </div>
                             </div>
                         </section>
