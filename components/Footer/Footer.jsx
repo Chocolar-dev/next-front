@@ -18,7 +18,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <form action="http://localhost:8765/send-contact" method="GET">
+                <form action={`${process.env.backendHost}/send-contact`} method="GET">
                     <div className="row">
                         <input type="text" name="first_name" placeholder="Nombre*" />
                     </div>

@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Layout from "../../components/Layout";
 import styles from "../../styles/components/Product.module.css"
 
-export default function product({ category, product, subcategory, origin }) {
+export default function product({ category, product, subcategory, origin, categories }) {
     let contactClick = function (evt) {
         let name = evt.target.dataset.infoName
         let input = document.querySelector('#message')
@@ -23,7 +23,7 @@ export default function product({ category, product, subcategory, origin }) {
                 <meta name="content-type" content={product.metaContentType} />
                 <meta name="language" content={product.metaLanguage} />
             </Head>
-            <Layout subtitle="Producto" description="Producto seleccionado">
+            <Layout subtitle="Producto" description="Producto seleccionado" categories={categories}>
                 <div className={styles['product-page']}>
                     <div className={styles.container}>
                         <Breadcrumbs category={category} product={product} />
@@ -77,10 +77,10 @@ export default function product({ category, product, subcategory, origin }) {
 }
 
 export async function getServerSideProps({ params }) {
-    let products = await (await fetch('http://localhost:8765/api/products')).json()
-    let categories = await (await fetch('http://localhost:8765/api/categories')).json()
-    let subcategories = await (await fetch('http://localhost:8765/api/sub-categories')).json()
-    let origins = await (await fetch('http://localhost:8765/api/origins')).json()
+    let products = await (await fetch(`${process.env.apiUrl}/products`)).json()
+    let categories = await (await fetch(`${process.env.apiUrl}/categories`)).json()
+    let subcategories = await (await fetch(`${process.env.apiUrl}/sub-categories`)).json()
+    let origins = await (await fetch(`${process.env.apiUrl}/origins`)).json()
     let product
     let category
     let subcategory
@@ -115,6 +115,6 @@ export async function getServerSideProps({ params }) {
     })
 
     return {
-        props: { product, category, subcategory, origin }
+        props: { product, category, subcategory, origin, categories }
     }
 }

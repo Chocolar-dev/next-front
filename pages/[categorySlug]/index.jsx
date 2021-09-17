@@ -2,9 +2,9 @@ import Layout from "../../components/Layout";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import CardProduct from "../../components/CardProduct/CardProduct";
 
-export default function index({ category, products, subCategoriesList }) {
+export default function index({ category, products, subCategoriesList, categories }) {
     return (
-        <Layout subtitle="Categoria" description="Productos de categorias seleccionada">
+        <Layout subtitle="Categoria" description="Productos de categorias seleccionada" categories={categories}>
             <div className="category-page m-top">
                 <div className="banner" style={{ backgroundImage: `url(${category.img_url})` }}>
                     <h1>{category.name}</h1>
@@ -24,9 +24,9 @@ export default function index({ category, products, subCategoriesList }) {
 }
 
 export async function getServerSideProps({ params }) {
-    let categories = await (await fetch("http://localhost:8765/api/categories")).json()
-    let products = await (await fetch("http://localhost:8765/api/products")).json()
-    let subCategories = await (await fetch("http://localhost:8765/api/sub-categories")).json()
+    let categories = await (await fetch(`${process.env.apiUrl}/categories`)).json()
+    let products = await (await fetch(`${process.env.apiUrl}/products`)).json()
+    let subCategories = await (await fetch(`${process.env.apiUrl}/sub-categories`)).json()
     let category;
     let subCategoriesList = []
 
@@ -43,6 +43,6 @@ export async function getServerSideProps({ params }) {
     })
 
     return {
-        props: { category, products, subCategoriesList }
+        props: { category, products, subCategoriesList, categories }
     }
 }

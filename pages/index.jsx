@@ -4,7 +4,7 @@ import CategoriesList from '../components/CategoriesList/CategoriesList';
 
 export default function Home({ categories }) {
   return (
-    <Layout>
+    <Layout categories={categories}>
 
       <div id="home" className="m-top-100">
         <div id="logo_slider"><img src="/old_assets/img/logo_slider.png" alt="" /></div>
@@ -113,7 +113,7 @@ export default function Home({ categories }) {
 }
 
 export async function getServerSideProps() {
-  let data = await fetch('http://localhost:8765/api/categories')
+  let data = await fetch(`${process.env.apiUrl}/categories`)
   return {
     props: {
       categories: await data.json()

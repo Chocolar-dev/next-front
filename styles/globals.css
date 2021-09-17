@@ -1,4 +1,5 @@
 :root {
+    --dark-brown: #291310;
     --brown-900: #381A13;
     --brown-800: #420D10;
     --brown-700: #52281C;
@@ -6,6 +7,7 @@
     --brown-500: #753D28;
     --brown-400: #A35639;
     --brown-300: #B5755C;
+    --grey-brown: #5A3E36;
     --white: #ffffff;
     --black: #1b1b1b;
     --gray-dark: #333333;
@@ -23,6 +25,7 @@
 
 body {
     font-family: "poppins-regular";
+    margin-top: 85px;
 }
 
 img {
@@ -86,10 +89,19 @@ a:hover {
 button {
     border: none;
     letter-spacing: 2px;
+    background: none;
 }
 
 .m-top {
     margin-top: 63px !important;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 @media (min-width:992px) {
