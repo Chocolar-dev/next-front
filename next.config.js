@@ -4,7 +4,7 @@ module.exports = {
     domains: ['via.placeholder.com']
   },
   env: {
-    apiUrl: 'http://localhost:8765/api',
-    backendHost: 'http://localhost:8765'
+    apiUrl: 'http://vps-2153822-x.dattaweb.com:8765/api',
+    backendHost: 'http://vps-2153822-x.dattaweb.com:8765'
   }
 }

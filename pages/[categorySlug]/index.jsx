@@ -1,25 +1,45 @@
 import Layout from "../../components/Layout";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import CardProduct from "../../components/CardProduct/CardProduct";
+import React from "react";
+import Head from "next/head";
 
 export default function index({ category, products, subCategoriesList, categories }) {
+    let contactClick = function (evt) {
+        let name = evt.target.dataset.infoName
+        let input = document.querySelector('#message')
+        input.value = `Hola, me gustaría consultar más información sobre la categoría ${name}`
+    }
     return (
-        <Layout subtitle="Categoria" description="Productos de categorias seleccionada" categories={categories}>
-            <div className="category-page m-top">
-                <div className="banner" style={{ backgroundImage: `url(${category.img_url})` }}>
-                    <h1>{category.name}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: category.description }}></div>
-                </div>
-                <Breadcrumbs category={category} />
-                <section className="product-category">
-                    <div className="wrapper">
-                        {products.map(product =>
-                            <CardProduct key={product.id} product={product} subCategory={subCategoriesList[product.sub_category_id]} category={category} />
-                        )}
+        <React.Fragment>
+            <Head>
+                <meta name="og:title" content={category.metaTitle != '' ? category.metaTitle : category.name} />
+                <meta name="og:description" content={category.metaDescription != '' ? category.metaDescription : category.short_description} />
+                <meta name="og:url"  content={`${category.metaUrl}/${category.slug}`} />
+                <meta name="og:image" content={category.metaImage} />
+                <meta name="og:site_name" content={category.metaSiteName} />
+                <meta name="content-type" content={category.metaContentType} />
+                <meta name="language" content={category.metaLanguage} />
+            </Head>
+            <Layout subtitle="Categoria" description="Productos de categorias seleccionada" categories={categories}>
+                <div className="category-page m-top">
+                    <div className="banner" style={{ backgroundImage: `url(${category.img_url})` }}>
+                        <h1>{category.name}</h1>
+                        <div className="category-description" dangerouslySetInnerHTML={{ __html: category.short_description }}></div>
+                        <a href="#contacto" onClick={contactClick} data-info-name={category.name} className="cta-button">SOLICITAR<br/>INFORMACIÓN</a>
                     </div>
-                </section>
-            </div>
-        </Layout>
+                    <Breadcrumbs category={category} />
+                    <section className="product-category">
+                        <div className="wrapper">
+                            {products.map(product =>
+                                <CardProduct key={product.id} product={product} subCategory={subCategoriesList[product.sub_category_id]} category={category} />
+                            )}
+                        </div>
+                    </section>
+                    <div className="category-description" dangerouslySetInnerHTML={{ __html: category.description }}></div>
+                </div>
+            </Layout>
+        </React.Fragment>
     )
 }
 

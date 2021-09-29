@@ -104,6 +104,15 @@ body {
     overflow-x: hidden;
 }
 
+.cta-button, .cta-button:active, .cta-button:link, .cta-button:visited {
+    background-color: var(--dark-brown);
+    color: white;
+    font-family: "barlow-bold";
+    padding: 18px 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
 @media (min-width:992px) {
     .category-item__img-container {
         height: 270px;
