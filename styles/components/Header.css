@@ -152,6 +152,11 @@
         text-decoration: none;
         margin: 0;
         padding: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .navbar ul li i {
         color: var(--brown-600);
@@ -194,9 +199,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-    }
-    .navbar-products__dropdown ul li:first-child a {
-        width: auto;
     }
     .navbar-products__dropdown ul li:hover:not(:first-child) {
         background: var(--brown-800);

@@ -35,10 +35,10 @@ export default function Header({ categories }) {
                             <Link href="/#quienes-somos"><a onClick={toggleMenu}>QUIENES SOMOS</a></Link>
                         </li>
                         <li className="navbar-products">
-                            <Link href="/#lista-de-categorias"><a onClick={toggleMenu}>PRODUCTOS</a></Link><img src="/imgs/icons/arrow-down.png" alt="" />
+                            <Link href="/#lista-de-categorias"><a onClick={toggleMenu}>PRODUCTOS<img src="/imgs/icons/arrow-down.png" alt="" /></a></Link>
                             <div className="navbar-products__dropdown">
                                 <ul>
-                                    <li><Link href="/#lista-de-categorias"><a>PRODUCTOS</a></Link><img src="/imgs/icons/arrow-down.png" alt="" /></li>
+                                    <li><Link href="/#lista-de-categorias"><a>PRODUCTOS<img src="/imgs/icons/arrow-down.png" alt="" /></a></Link></li>
                                     {categories.map((category) => {
                                         return <li key={category.id}><Link href={`/${category.slug}`}><a>{category.name}</a></Link></li>
                                     })}

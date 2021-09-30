@@ -11,6 +11,25 @@ export default function product({ category, product, subcategory, origin, catego
         let input = document.querySelector('#message')
         input.value = `Hola, me gustaría consultar más información sobre el producto ${name}`
     }
+    let nextBtnClick = function (evt) {
+        let img = document.querySelector(`.${styles['gallery__img']}`)
+        let i = parseInt(img.dataset.current) + 1
+        if (product.imgs.length <= i) {
+            i = 0
+        }
+        img.dataset.current = i
+        img.src = product.imgs[i]
+    }
+    let prevBtnClick = function (evt) {
+        let img = document.querySelector(`.${styles['gallery__img']}`)
+        let i = parseInt(img.dataset.current) - 1
+        if (i < 0) {
+            i = product.imgs.length - 1
+        }
+        console.log(i);
+        img.dataset.current = i
+        img.src = product.imgs[i]
+    }
 
     return (
         <React.Fragment>
@@ -29,11 +48,15 @@ export default function product({ category, product, subcategory, origin, catego
                         <Breadcrumbs category={category} product={product} />
                         <section className={styles.product}>
                             <div className={styles['product__type']}>
-                                <h3>{subcategory.name}</h3>
+                                <h3>{subcategory.name}<div className="test"></div></h3>
                             </div>
                             <div className="row">
                                 <div className="col-lg-4 flex align-items-stretch">
-                                    <img src={product.img_url_1} alt={product.name} />
+                                    <div className={styles.gallery}>
+                                        <button onClick={prevBtnClick} className={styles['gallery__prev-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt="" /></button>
+                                        <img className={styles['gallery__img']} src={product.imgs[0]} data-current="0" alt={product.name} />
+                                        <button onClick={nextBtnClick} className={styles['gallery__next-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt="" /></button>
+                                    </div>
                                 </div>
                                 <div className="offset-lg-1 col-lg-7">
                                     <h2 className={styles['product__name']}>{product.name}</h2>
