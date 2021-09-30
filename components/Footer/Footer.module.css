@@ -23,6 +23,7 @@
 
 .footer textarea {
     margin: 0;
+    height: 100%;
 }
 
 .footer label {

@@ -29,20 +29,20 @@ export default function Footer() {
                         <input type="text" name="phone" placeholder="Teléfono*" />
                     </div>
                     <div className="row mt-3">
-                        <div className="col-8" style={{ lineHeight: '0' }}>
+                        <div className="col-12 col-md-8" style={{ lineHeight: '0' }}>
                             <textarea style={{ lineHeight: '1' }} name="message" id="message" cols="30" rows="10"
                                 placeholder="Mensaje*"></textarea>
                         </div>
-                        <div className="col-4 d-flex flex-column justify-content-end align-items-stretch pl-5 pr-5 pb-0">
-                            <div className="d-flex align-items-center flex-column">
-                                <div>
-                                    <div className="row">
+                        <div className="col-12 col-md-4 pt-5 pb-5 pt-md-0 pb-md-0 d-flex flex-column justify-content-end align-items-stretch pl-5 pr-5 pb-0">
+                            <div className="d-flex align-items-md-center flex-column">
+                                <div className="row">
+                                    <div className="col-6 col-md-12">
                                         <input type="radio" name="contact-type" value="provider" id="provider" />
                                         <label htmlFor="provider">
                                             <div className={styles["radio-box"]}></div><span>PROVEEDOR</span>
                                         </label>
                                     </div>
-                                    <div className="row">
+                                    <div className="col-6 col-md-12">
                                         <input type="radio" name="contact-type" value="client" id="client" />
                                         <label htmlFor="client">
                                             <div className={styles["radio-box"]}></div><span>CLIENTE</span>
@@ -58,6 +58,27 @@ export default function Footer() {
                 </form>
                 <div id="resultado" style={{ color: "#ffffff", fontSize: "17px", marginTop: "10px" }}></div>
 
+                <div style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    paddingBottom: "60px",
+                    flexWrap: "wrap",
+                    maxWidth: "1140px",
+                    margin: "auto",
+                }}>
+                    <div>
+                        <div style={{ fontSize: "18px", textAlign: "left", minWidth: "250px", }}>
+                            <font style={{ fontWeight: "600", fontStyle: "italic", }}>Comunicate con nosotros</font><br />
+                            <font style={{ fontWeight: "600" }}>Oficina:</font>  48119667 <br />
+                            <font style={{ fontWeight: "600" }}>Celular:</font>  1550104148 <br />
+                            <font style={{ fontWeight: "600" }}>Compras menores a 500kg:</font>  (011) 5010-4148 <br />
+                            <font style={{ fontWeight: "600" }}>Compras mayores a 500kg:</font>  (011) 5005-8912
+                        </div>
+                    </div>
+                    <div style={{ minWidth: "250px" }}>
+                        <img src="http://chocolarsrl.com.ar/img/logo_iso.png" alt="" id="logo_quienes_somos" />
+                    </div>
+                </div>
                 <br /><br />
             </div>
         </footer>
