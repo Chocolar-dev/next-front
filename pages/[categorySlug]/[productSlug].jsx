@@ -34,11 +34,11 @@ export default function product({ category, product, subcategory, origin, catego
     return (
         <React.Fragment>
             <Head>
-                <meta name="title" content={product.metaTitle} />
-                <meta name="description" content={product.metaDescription} />
-                <meta name="url" content={product.metaUrl} />
-                <meta name="image" content={product.metaImage} />
-                <meta name="site-name" content={product.metaSiteName} />
+                <meta name="og:title" content={product.metaTitle != '' ? product.metaTitle : product.name} />
+                <meta name="og:description" content={product.metaDescription != '' ? product.metaDescription : product.short_description} />
+                <meta name="og:url"  content={`${product.metaUrl}/${category.slug}/${product.slug}`} />
+                <meta name="og:image" content={product.metaImage} />
+                <meta name="og:site_name" content={product.metaSiteName} />
                 <meta name="content-type" content={product.metaContentType} />
                 <meta name="language" content={product.metaLanguage} />
             </Head>

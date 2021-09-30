@@ -1,0 +1,133 @@
+.header {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    z-index: 10000;
+  }
+
+  .toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background: #37a6ff;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+  }
+  .toggle.active {
+      background: #f7226a;
+  }
+  .toggle::before {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background: #000;
+      transition: 0.2s;
+      transform: translateY(-10px);
+      box-shadow: 0 10px 0 #000;
+  }
+  .toggle.active::before {
+      transform: translateY(0px) rotate(45deg);
+      box-shadow: 0 0 0 #000;
+  }
+
+  .toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #000;
+    transition: 0.2s;
+    transform: translateY(10px);
+  }
+  .toggle.active::after{
+      transform: translateY(0px) rotate(-45deg);
+  }
+  
+  .navbar {
+      position: relative;
+      width: 1024px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .navbar ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar ul li {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+  }
+
+  .navbar ul li:hover {
+      background: var(--gray-light)!important;
+  }
+
+  .navbar ul li a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 1rem;
+      color: var(--brown-600);
+  }
+
+  .navproductos {
+      /* position: relative; */
+      width: 100%;
+      height: 100%;
+      display: flex;
+      /* flex-direction: column; */
+  }
+  .navproductos a {
+      margin: 0;
+  }
+  .submenu {
+      position: absolute;
+      width: 25%;
+      height: auto;
+      background: #000;
+      display: block;
+      top: 63px;
+      z-index: 99999999;
+  }
+  .submenu ul {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .submenu ul li {
+      width: 100%;
+      height: 63px;
+  }

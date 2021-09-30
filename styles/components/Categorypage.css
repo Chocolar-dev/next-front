@@ -169,6 +169,21 @@
     background-color: var(--dark-brown);
 }
 
+.category-description {
+    max-width: 100ch;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.category-page .cta-button {
+    margin-top: 36px;
+}
+
+.card-mobile a {
+    margin: 0 !important;
+}
+
 @media (max-width: 1023px) {
     .category-page .banner {
         max-height: 400px;

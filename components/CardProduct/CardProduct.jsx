@@ -10,10 +10,12 @@ export default function CardProduct({ product, category, subCategory }) {
             <div className="card-desk">
                 <h3>{subCategory.name}</h3>
                 <div className="img-product">
-                    <img src={product.img_url} alt="" />
+                    <a href={`/${category.slug}/${product.slug}`}><img src={product.img_url} alt="" /></a>
                 </div>
                 <div className="detail">
-                    <h2>{product.name}</h2>
+                    <a href={`/${category.slug}/${product.slug}`}>
+                        <h2>{product.name}</h2>
+                    </a>
                     <p>{product.short_description}</p>
                     <h5>{product.brand}</h5>
                 </div>
@@ -24,14 +26,16 @@ export default function CardProduct({ product, category, subCategory }) {
             </div>
             <div className="card-mobile">
                 <div className="img-product">
-                    <img src={product.img_url} alt="" />
+                    <a href={`/${category.slug}/${product.slug}`}><img src={product.img_url} alt="" /></a>
                 </div>
                 <div className="type">
                     <h3>{subCategory.name}</h3>
                 </div>
                 <div className="wrapper-detail">
                     <div className="detail">
-                        <h2>{product.name}</h2>
+                        <a href={`/${category.slug}/${product.slug}`}>
+                            <h2>{product.name}</h2>
+                        </a>
                         <p>{product.short_description}</p>
                         <h5>{product.brand}</h5>
                     </div>
