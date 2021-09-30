@@ -58,9 +58,8 @@ export default function Footer() {
                 </form>
                 <div id="resultado" style={{ color: "#ffffff", fontSize: "17px", marginTop: "10px" }}></div>
 
-                <div style={{
+                <div className={styles.extra} style={{
                     display: "flex",
-                    justifyContent: "space-between",
                     paddingBottom: "60px",
                     flexWrap: "wrap",
                     maxWidth: "1140px",

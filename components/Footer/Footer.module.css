@@ -73,3 +73,13 @@
 .footer .footer-text h1 {
     font-size: 2rem;
 }
+
+.extra {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .extra {
+        justify-content: space-between;
+    }
+}
