@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Layout from "../../components/Layout";
+import PhoneButtons from "../../components/phoneButtons/PhoneButtons";
 import styles from "../../styles/components/Product.module.css"
 
 export default function product({ category, product, subcategory, origin, categories }) {
@@ -35,14 +36,16 @@ export default function product({ category, product, subcategory, origin, catego
         <React.Fragment>
             <Head>
                 <meta name="og:title" content={product.metaTitle != '' ? product.metaTitle : product.name} />
-                <meta name="og:description" content={product.metaDescription != '' ? product.metaDescription : product.short_description} />
-                <meta name="og:url"  content={`${product.metaUrl}/${category.slug}/${product.slug}`} />
+                <meta name="og:description" content={product.metaDescription != '' ? product.metaDescription : product.short_description.replace(/<\/?p>/g, '')} />
+                <meta name="og:url" content={`${product.metaUrl}/${category.slug}/${product.slug}`} />
                 <meta name="og:image" content={product.metaImage} />
                 <meta name="og:site_name" content={product.metaSiteName} />
                 <meta name="content-type" content={product.metaContentType} />
                 <meta name="language" content={product.metaLanguage} />
+                <meta name="og:type" content="article" />
+                <link rel="canonical" href={`${product.metaUrl}/${category.slug}/${product.slug}`} />
             </Head>
-            <Layout subtitle="Producto" description="Producto seleccionado" categories={categories}>
+            <Layout title={product.name} description={product.metaDescription != '' ? product.metaDescription : product.short_description.replace(/<\/?p>/g, '')} categories={categories}>
                 <div className={styles['product-page']}>
                     <div className={styles.container}>
                         <Breadcrumbs category={category} product={product} />
@@ -53,9 +56,9 @@ export default function product({ category, product, subcategory, origin, catego
                             <div className="row">
                                 <div className="col-lg-4 flex align-items-stretch">
                                     <div className={styles.gallery}>
-                                        <button onClick={prevBtnClick} className={styles['gallery__prev-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt="" /></button>
+                                        <button onClick={prevBtnClick} className={styles['gallery__prev-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt="<" /></button>
                                         <img className={styles['gallery__img']} src={product.imgs[0]} data-current="0" alt={product.name} />
-                                        <button onClick={nextBtnClick} className={styles['gallery__next-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt="" /></button>
+                                        <button onClick={nextBtnClick} className={styles['gallery__next-btn']}><img src="/imgs/icons/chevron-right-solid.svg" alt=">" /></button>
                                     </div>
                                 </div>
                                 <div className="offset-lg-1 col-lg-7">
@@ -95,6 +98,7 @@ export default function product({ category, product, subcategory, origin, catego
                     </div>
                 </div>
             </Layout>
+            <PhoneButtons waMessageTopic={`el producto ${product.name}`} />
         </React.Fragment>
     )
 }

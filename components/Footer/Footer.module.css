@@ -70,8 +70,15 @@
     margin-top: 40px;
 }
 
-.footer .footer-text h1 {
+.footer .footer-text h4 {
     font-size: 2rem;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    color: #FFF;
+    font-family: Barlow-Regular;
+    font-size: 40pt;
+    font-weight: 100;
 }
 
 .extra {

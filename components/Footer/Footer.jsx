@@ -1,13 +1,19 @@
 import styles from './Footer.module.css'
+import { useEffect } from 'react'
 
 export default function Footer() {
+
+    useEffect(() => {
+        document.getElementById('contact-form-url').value = window.location.href
+    }, [])
+
     return (
         <footer className={`${styles.footer} section section-primary white-transparent3`} id="contacto">
             <div className="container">
                 <div className="row">
                     <div className={`col-md-12 ${styles["footer-text"]}`}>
-                        <img className={styles['footer-logo']} src="/old_assets/img/logo_footer.png" />
-                        <h1>CONTACTO</h1>
+                        <img className={styles['footer-logo']} src="/old_assets/img/webp/logo_footer.webp" />
+                        <h4>CONTACTO</h4>
                         <p>
                             En <span className="bold">Chocolar S.R.L</span> estamos a disposición por cualquier consulta.<br />
                             Por favor, dejá tus inquietudes en el formulario y te responderemos a la brevedad.
@@ -18,12 +24,13 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <form action={`${process.env.backendHost}/send-contact`} method="GET">
+                <form action={`${process.env.backendHost}/send-contact`} method="GET" id="contact-form">
+                    <input type="hidden" name="url" id="contact-form-url" />
                     <div className="row">
-                        <input type="text" name="first_name" placeholder="Nombre*" />
+                        <input type="text" name="name" placeholder="Nombre Completo*" required />
                     </div>
                     <div className="row">
-                        <input type="text" name="last_name" placeholder="Apellido*" />
+                        <input type="email" name="email" placeholder="Correo Electrónico*" required />
                     </div>
                     <div className="row">
                         <input type="text" name="phone" placeholder="Teléfono*" />
@@ -31,7 +38,7 @@ export default function Footer() {
                     <div className="row mt-3">
                         <div className="col-12 col-md-8" style={{ lineHeight: '0' }}>
                             <textarea style={{ lineHeight: '1' }} name="message" id="message" cols="30" rows="10"
-                                placeholder="Mensaje*"></textarea>
+                                placeholder="Mensaje*" required ></textarea>
                         </div>
                         <div className="col-12 col-md-4 pt-5 pb-5 pt-md-0 pb-md-0 d-flex flex-column justify-content-end align-items-stretch pl-5 pr-5 pb-0">
                             <div className="d-flex align-items-md-center flex-column">
@@ -75,7 +82,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div style={{ minWidth: "250px" }}>
-                        <img src="http://chocolarsrl.com.ar/img/logo_iso.png" alt="" id="logo_quienes_somos" />
+                        <img src="https://chocolarsrl.com.ar/old_assets/img/webp/logo_iso.webp" alt="" id="logo_quienes_somos" />
                     </div>
                 </div>
                 <br /><br />

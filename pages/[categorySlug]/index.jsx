@@ -3,6 +3,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import React from "react";
 import Head from "next/head";
+import PhoneButtons from "../../components/phoneButtons/PhoneButtons";
 
 export default function index({ category, products, subCategoriesList, categories }) {
     let contactClick = function (evt) {
@@ -14,19 +15,21 @@ export default function index({ category, products, subCategoriesList, categorie
         <React.Fragment>
             <Head>
                 <meta name="og:title" content={category.metaTitle != '' ? category.metaTitle : category.name} />
-                <meta name="og:description" content={category.metaDescription != '' ? category.metaDescription : category.short_description} />
-                <meta name="og:url"  content={`${category.metaUrl}/${category.slug}`} />
+                <meta name="og:description" content={category.metaDescription != '' ? category.metaDescription : category.short_description.replace(/<\/?p>/g, '')} />
+                <meta name="og:url" content={`${category.metaUrl}/${category.slug}`} />
                 <meta name="og:image" content={category.metaImage} />
                 <meta name="og:site_name" content={category.metaSiteName} />
                 <meta name="content-type" content={category.metaContentType} />
                 <meta name="language" content={category.metaLanguage} />
+                <meta name="og:type" content="article" />
+                <link rel="canonical" href={`${category.metaUrl}/${category.slug}`} />
             </Head>
-            <Layout subtitle="Categoria" description="Productos de categorias seleccionada" categories={categories}>
+            <Layout title={category.name} description={category.metaDescription != '' ? category.metaDescription : category.short_description.replace(/<\/?p>/g, '')} categories={categories}>
                 <div className="category-page m-top">
                     <div className="banner" style={{ backgroundImage: `url(${category.img_url})` }}>
                         <h1>{category.name}</h1>
                         <div className="category-description" dangerouslySetInnerHTML={{ __html: category.short_description }}></div>
-                        <a href="#contacto" onClick={contactClick} data-info-name={category.name} className="cta-button">SOLICITAR<br/>INFORMACIÓN</a>
+                        <a href="#contacto" onClick={contactClick} data-info-name={category.name} className="cta-button">SOLICITAR<br />INFORMACIÓN</a>
                     </div>
                     <Breadcrumbs category={category} />
                     <section className="product-category">
@@ -39,6 +42,7 @@ export default function index({ category, products, subCategoriesList, categorie
                     <div className="category-description" dangerouslySetInnerHTML={{ __html: category.description }}></div>
                 </div>
             </Layout>
+            <PhoneButtons waMessageTopic={`la categoría ${category.name}`} />
         </React.Fragment>
     )
 }

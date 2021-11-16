@@ -186,7 +186,7 @@
 
 @media (max-width: 1023px) {
     .category-page .banner {
-        max-height: 400px;
+        max-height: 450px;
     }
     .category-page .banner h1 {
         font-size: 2.8rem;
@@ -233,13 +233,10 @@
 
 @media (max-width: 768px) {
     .category-page .banner {
-        height: 240px;
+        height: 450px;
     }
     .category-page .banner h1 {
         font-size: 2rem;
-    }
-    .category-page .banner p {
-        display: none;
     }
     .product-category .wrapper {
         width: 100%;

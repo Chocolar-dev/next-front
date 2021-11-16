@@ -1,6 +1,4 @@
 import Link from 'next/link';
-// import styles from '../../styles/components/Navbar.module.css';
-
 
 export default function Header({ categories }) {
     let toggleMenu = function (evt) {
@@ -51,7 +49,7 @@ export default function Header({ categories }) {
                     </ul>
                 </nav>
                 <div className="navbar-img">
-                    <img src="/imgs/navbar-image.png" alt="" />
+                    <img src="/imgs/webp/navbar-image.webp" alt="" />
                 </div>
             </div>
         </header>

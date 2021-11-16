@@ -1,0 +1,34 @@
+.phone-buttons {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    line-height: 0;
+}
+
+.phone-button {
+    display: inline-block;
+    margin: 0;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
+
+.phone-buttons>*+* {
+    margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .phone-buttons {
+        bottom: 45px;
+        right: 45px;
+    }
+    .phone-buttons>*+* {
+        margin-left: 45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .phone-button:nth-child(2) {
+        display: none;
+    }
+}
