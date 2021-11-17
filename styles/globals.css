@@ -23,6 +23,11 @@
     font-size: 16px;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
 body {
     font-family: "poppins-regular";
     margin-top: 85px;
